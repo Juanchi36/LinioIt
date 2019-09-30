@@ -42,6 +42,11 @@ final class LinioChallengeTest extends TestCase
 		$this->assertEquals($this->challenge->getResult()[96], 97);
 	}
 
+	public function testPrint()
+	{
+		$this->assertIsString($this->challenge->print());
+	}
+
 	protected function tearDown() :void
     {
         $this->challenge = null;

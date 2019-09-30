@@ -44,16 +44,18 @@ class LinioChallenge
     
     /**
      * Print on screen the data contained in the array.
-     * @return bool
+     * @return string
      */
     public function print()
     {
+        $str = "";
+
         if(isset($this->result)){
             foreach($this->result as $value){
-                echo $value . "\n";
+                $str .= $value . "\n";
             }
         }
-        return true;
+        return $str;
     }
     
     /**
