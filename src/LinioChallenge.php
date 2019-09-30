@@ -2,6 +2,12 @@
 
 namespace Challenge;
 
+/**
+ * Class that generates the numbers, 
+ * replaces them with the corresponding words and prints the result.
+ *
+ * @author  Juan Martín González
+*/ 
 class LinioChallenge
 {
     private $result;
@@ -10,6 +16,12 @@ class LinioChallenge
     {
         $this->result = array();
     }
+
+    /**
+     * Generate the numbers, replace the strings when appropriate 
+     * and save the result in an array.
+     * @return object
+     */
     public function play()
     {
         for ( $i = 1; $i <= 100; ++$i ){
@@ -30,6 +42,10 @@ class LinioChallenge
         return $this;
     }
     
+    /**
+     * Print on screen the data contained in the array.
+     * @return bool
+     */
     public function print()
     {
         if(isset($this->result)){
@@ -37,5 +53,15 @@ class LinioChallenge
                 echo $value . "\n";
             }
         }
-    } 
+        return true;
+    }
+    
+    /**
+     * Getter of the result property
+     * @return array
+     */
+    public function getResult()
+    {
+        return $this->result;
+    }
 }
