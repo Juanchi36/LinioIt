@@ -11,5 +11,6 @@ composer install
 ```
 
 # To run test:
-
+```
 .\vendor\bin\phpunit .\test
+```
